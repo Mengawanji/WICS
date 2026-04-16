@@ -1,0 +1,70 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  color?: string;
+}
+const { title, description, icon, color = "#1e4fa8" } = Astro.props;
+---
+
+<div class="service-card">
+  <div class="card-icon" style={`background: ${color}18; color: ${color}`} set:html={icon}></div>
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <a href="/services" class="card-link">
+    Learn more
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</div>
+
+<style>
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid var(--gray-100);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+.card-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-icon :global(svg) { width: 26px; height: 26px; }
+h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+}
+p {
+  font-size: 0.88rem;
+  color: var(--gray-600);
+  line-height: 1.65;
+  flex: 1;
+}
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blue-mid);
+  transition: gap 0.2s, color 0.2s;
+  margin-top: 0.25rem;
+}
+.card-link:hover {
+  color: var(--orange);
+  gap: 0.6rem;
+}
+</style>

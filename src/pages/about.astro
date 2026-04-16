@@ -1,0 +1,410 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const values = [
+  {
+    title: "Speed & Efficiency",
+    desc: "We value your time. Our streamlined processes ensure you get things done quickly, without the usual bureaucratic delays.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+    color: "#f97316"
+  },
+  {
+    title: "Trust & Reliability",
+    desc: "Nine years of consistent, honest service has built us a reputation as the most trusted agency in Mokundange.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+    color: "#1e4fa8"
+  },
+  {
+    title: "Customer First",
+    desc: "Every decision we make centers on delivering the best experience to the people and businesses we serve.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>`,
+    color: "#10b981"
+  },
+  {
+    title: "Transparency",
+    desc: "We believe in clear, upfront pricing and honest communication — no hidden fees, no surprises.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>`,
+    color: "#8b5cf6"
+  }
+];
+
+const milestones = [
+  { year: "2015", event: "WICS Agency founded in Mokundange, Limbe" },
+  { year: "2017", event: "Expanded to offer CANAL+ and DStv subscriptions" },
+  { year: "2019", event: "Official AXA Insurance partner for motor coverage" },
+  { year: "2021", event: "Added DHL Express and CAMTEL BLUE SIM services" },
+  { year: "2023", event: "Launched 24/7 customer support via WhatsApp" },
+  { year: "2024+", event: "Continuously growing and serving Limbe's community" },
+];
+---
+
+<Layout title="About Us" description="Learn about WICS Agency – 9+ years of trusted business services in Limbe, Cameroon.">
+  <Navbar />
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1400&q=80&auto=format"
+        alt="Professional team working"
+        class="hero-img"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="breadcrumb"><a href="/">Home</a> / <span>About</span></div>
+      <h1>About WICS Agency</h1>
+      <p>Built on trust, driven by excellence — serving Limbe since 2015.</p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story-section">
+    <div class="container story-grid">
+      <div class="story-image">
+        <img
+          src="public/Menkam.jpeg"
+          alt="Professional office environment"
+        />
+        <div class="exp-badge">
+          <strong>9+</strong>
+          <span>Years in Business</span>
+        </div>
+      </div>
+      <div class="story-text">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">From a Local Idea to Limbe's Trusted Agency</h2>
+        <p>WICS Agency was established with a clear mission: to make essential services more accessible, faster, and more affordable for the people of Limbe and the surrounding area.</p>
+        <p>What started as a small documentation center in Mokundange has grown into a full-service agency offering everything from satellite TV subscriptions and insurance to international shipping and telecom services — all in one location, right beside the Port Authority Office.</p>
+        <p>Over nine years, we've built strong partnerships with major brands like AXA, DHL, CANAL+, DStv, StarTimes, and CAMTEL, allowing us to offer you the best service at competitive prices.</p>
+        <div class="story-highlights">
+          <div class="highlight"><span class="num">9+</span><span class="lbl">Years Experience</span></div>
+          <div class="highlight"><span class="num">8+</span><span class="lbl">Services Offered</span></div>
+          <div class="highlight"><span class="num">100%</span><span class="lbl">Customer Commitment</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="mission-section">
+    <div class="container mission-grid">
+      <div class="mission-card mission-card--blue">
+        <div class="mc-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Our Mission</h3>
+        <p>To provide fast, reliable, and affordable services to individuals and businesses in Limbe — making everyday tasks simple and stress-free for our community.</p>
+      </div>
+      <div class="mission-card mission-card--orange">
+        <div class="mc-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Our Vision</h3>
+        <p>To become the most trusted multi-service agency in the South West Region, known for excellence, efficiency, and genuine care for every customer we serve.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Stand For</span>
+        <h2 class="section-title">Our Core Values</h2>
+      </div>
+      <div class="values-grid">
+        {values.map(v => (
+          <div class="value-card">
+            <div class="value-icon" style={`background: ${v.color}15; color: ${v.color}`} set:html={v.icon}></div>
+            <h3>{v.title}</h3>
+            <p>{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Journey</span>
+        <h2 class="section-title">9+ Years of Growth</h2>
+      </div>
+      <div class="timeline">
+        {milestones.map((m, i) => (
+          <div class={`timeline-item ${i % 2 === 0 ? 'left' : 'right'}`}>
+            <div class="timeline-card">
+              <div class="timeline-year">{m.year}</div>
+              <p>{m.event}</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+        ))}
+        <div class="timeline-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="about-cta">
+    <div class="container about-cta-inner">
+      <div>
+        <h2>Come Visit Us Today</h2>
+        <p>Find us at Mokundange, Limbe — beside the Port Authority Office. We're open Monday through Saturday, 8 AM to 6 PM.</p>
+      </div>
+      <div class="about-cta-btns">
+        <a href="/contact" class="btn btn-primary">Get Directions</a>
+        <a href="https://wa.me/237699949035" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+/* PAGE HERO */
+.page-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg { position: absolute; inset: 0; }
+.hero-img { width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(26,58,107,0.82) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+  color: var(--white);
+}
+.breadcrumb {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 1.2rem;
+}
+.breadcrumb a { color: rgba(255,255,255,0.6); }
+.breadcrumb a:hover { color: var(--orange); }
+.hero-content h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+.hero-content p { font-size: 1.1rem; color: rgba(255,255,255,0.8); }
+
+/* STORY */
+.story-section { padding: 6rem 0; }
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.story-image { position: relative; }
+.story-image img {
+  width: 100%; height: 480px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+}
+.exp-badge {
+  position: absolute;
+  top: 2rem; right: -1.5rem;
+  background: var(--blue-mid);
+  color: white;
+  padding: 1.2rem 1.8rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+.exp-badge strong {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.exp-badge span { font-size: 0.78rem; font-weight: 600; opacity: 0.9; }
+.story-text { display: flex; flex-direction: column; gap: 1rem; }
+.story-text p { color: var(--gray-600); font-size: 0.95rem; line-height: 1.8; }
+.story-highlights {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  padding: 1.5rem;
+  background: var(--gray-50);
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-100);
+}
+.highlight { text-align: center; }
+.highlight .num {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--blue-mid);
+}
+.highlight .lbl { font-size: 0.78rem; color: var(--gray-600); font-weight: 500; }
+
+/* MISSION */
+.mission-section { background: var(--gray-50); padding: 5rem 0; }
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.mission-card {
+  padding: 3rem;
+  border-radius: 20px;
+  color: white;
+}
+.mission-card--blue { background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%); }
+.mission-card--orange { background: linear-gradient(135deg, #c2410c 0%, var(--orange) 100%); }
+.mc-icon {
+  width: 64px; height: 64px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.mission-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.mission-card p { color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.75; }
+
+/* VALUES */
+.values-section { padding: 6rem 0; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.value-card {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s;
+}
+.value-card:hover { transform: translateY(-5px); }
+.value-icon {
+  width: 60px; height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+}
+.value-icon :global(svg) { width: 26px; height: 26px; }
+.value-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 0.75rem;
+}
+.value-card p { font-size: 0.85rem; color: var(--gray-600); line-height: 1.7; }
+
+/* TIMELINE */
+.timeline-section { background: var(--gray-50); padding: 6rem 0; }
+.timeline {
+  position: relative;
+  max-width: 760px;
+  margin: 3rem auto 0;
+}
+.timeline-line {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%; transform: translateX(-50%);
+  width: 2px;
+  background: linear-gradient(to bottom, var(--blue-mid), var(--orange));
+}
+.timeline-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+.timeline-item.left { flex-direction: row-reverse; }
+.timeline-card {
+  width: calc(50% - 2.5rem);
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-100);
+}
+.timeline-item.left .timeline-card { margin-right: 2.5rem; text-align: right; }
+.timeline-item.right .timeline-card { margin-left: 2.5rem; }
+.timeline-year {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--orange);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.4rem;
+}
+.timeline-card p { font-size: 0.88rem; color: var(--gray-600); }
+.timeline-dot {
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  top: 1.5rem;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--blue-mid);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 3px var(--blue-mid);
+  z-index: 1;
+}
+
+/* ABOUT CTA */
+.about-cta {
+  background: var(--blue-dark);
+  padding: 4rem 0;
+}
+.about-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.about-cta h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.about-cta p { color: rgba(255,255,255,0.72); font-size: 0.95rem; max-width: 440px; }
+.about-cta-btns { display: flex; gap: 1rem; flex-wrap: wrap; flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .story-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .mission-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .exp-badge { right: 0; }
+  .timeline-line { left: 20px; transform: none; }
+  .timeline-item, .timeline-item.left { flex-direction: column; padding-left: 50px; }
+  .timeline-card, .timeline-item.left .timeline-card { width: 100%; margin: 0; text-align: left; }
+  .timeline-dot { left: 20px; transform: translateX(-50%); }
+}
+@media (max-width: 560px) {
+  .values-grid { grid-template-columns: 1fr; }
+  .about-cta-inner { flex-direction: column; }
+}
+</style>
