@@ -74,6 +74,7 @@ const serviceGroups = [
         src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=1400&q=80&auto=format"
         alt="Business services"
         class="hero-img"
+        loading="eager"
       />
       <div class="hero-overlay"></div>
     </div>
@@ -97,7 +98,7 @@ const serviceGroups = [
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
             Call Now
           </a>
-          <a href="https://wa.me/237699949035" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <a href="https://wa.me/237699949035" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
             WhatsApp Us
           </a>
         </div>
@@ -126,7 +127,7 @@ const serviceGroups = [
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
                   Call to Inquire
                 </a>
-                <a href="https://wa.me/237699949035" class="dc-btn dc-btn-wa">
+                <a href="https://wa.me/237699949035" class="dc-btn dc-btn-wa" target="_blank" rel="noopener noreferrer">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   WhatsApp
                 </a>
@@ -144,133 +145,70 @@ const serviceGroups = [
       <p class="partners-label">Trusted Partners</p>
       <div class="partners-row">
         {[<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
-  <!-- Black background rectangle -->
-  <rect x="0" y="0" width="300" height="100" rx="4" ry="4" fill="#1a1a1a"/>
-  <!-- CANAL+ text in white, bold -->
-  <text x="150" y="68" font-family="Arial Black, Helvetica Neue, Arial, sans-serif" font-size="58" font-weight="900" fill="white" text-anchor="middle" dominant-baseline="auto" letter-spacing="-1">CANAL+</text>
-</svg>,
-        
-      
+            <!-- Black background rectangle -->
+            <rect x="0" y="0" width="300" height="100" rx="4" ry="4" fill="#1a1a1a"/>
+            <!-- CANAL+ text in white, bold -->
+            <text x="150" y="68" font-family="Arial Black, Helvetica Neue, Arial, sans-serif" font-size="58" font-weight="900" fill="white" text-anchor="middle" dominant-baseline="auto" letter-spacing="-1">CANAL+</text>
+          </svg>,
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="320" height="100">
-  <!-- AXA square background -->
-  <rect x="10" y="15" width="72" height="72" fill="#1a1f8c"/>
-  <!-- Red diagonal slash -->
-  <line x1="48" y1="18" x2="74" y2="82" stroke="#e8001c" stroke-width="6" stroke-linecap="round"/>
-  <!-- AXA text in white -->
-  <text x="46" y="68" font-family="Arial Black, Arial, sans-serif" font-size="30" font-weight="900" fill="white" text-anchor="middle" dominant-baseline="auto" letter-spacing="1">AXA</text>
-  <!-- Investment Managers text -->
-  <text x="100" y="50" font-family="Georgia, Times New Roman, serif" font-size="22" font-weight="400" fill="#1a1f8c" dominant-baseline="middle">Investment</text>
-  <text x="100" y="76" font-family="Georgia, Times New Roman, serif" font-size="22" font-weight="400" fill="#1a1f8c" dominant-baseline="middle">Managers</text>
-</svg>,
+          <img 
+            src="/DStv.svg" 
+            alt="DStv logo" 
+            style={{ width: "400px", height: "100" }} 
+          />,
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+            <!-- SIM card shape -->
+            <rect x="30" y="40" width="140" height="110" rx="14" ry="14" fill="#1a3ef0"/>
+            <!-- SIM chip outline -->
+            <rect x="48" y="62" width="54" height="44" rx="6" ry="6" fill="none" stroke="white" stroke-width="3.5"/>
+            <!-- SIM chip gold contact -->
+            <rect x="55" y="70" width="34" height="28" rx="3" ry="3" fill="#e8a020"/>
+            <!-- Chip circuit lines -->
+            <line x1="63" y1="70" x2="63" y2="98" stroke="#c07010" stroke-width="1.2"/>
+            <line x1="71" y1="70" x2="71" y2="98" stroke="#c07010" stroke-width="1.2"/>
+            <line x1="79" y1="70" x2="79" y2="98" stroke="#c07010" stroke-width="1.2"/>
+            <line x1="55" y1="80" x2="89" y2="80" stroke="#c07010" stroke-width="1.2"/>
+            <line x1="55" y1="88" x2="89" y2="88" stroke="#c07010" stroke-width="1.2"/>
+            <!-- "blue" text -->
+            <text x="112" y="100" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="32" font-weight="900" fill="white" dominant-baseline="middle" text-anchor="middle">blue</text>
+          </svg>,
 
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 120" width="280" height="120">
-  <!-- Main ticket body -->
-  <rect x="5" y="5" width="275" height="110" rx="10" ry="10" fill="white" stroke="#e0e0e0" stroke-width="1.5"/>
-  <!-- Red header strip -->
-  <rect x="5" y="5" width="275" height="38" rx="10" ry="10" fill="#cc1122"/>
-  <rect x="5" y="28" width="275" height="15" fill="#cc1122"/>
-
-  <!-- Perforation line -->
-  <line x1="218" y1="5" x2="218" y2="115" stroke="#e0e0e0" stroke-width="1.5" stroke-dasharray="5,4"/>
-
-  <!-- Barcode area (left) -->
-  <rect x="14" y="50" width="22" height="60" rx="2" fill="#222"/>
-  <rect x="18" y="50" width="3" height="60" fill="white"/>
-  <rect x="24" y="50" width="2" height="60" fill="white"/>
-  <rect x="29" y="50" width="4" height="60" fill="white"/>
-
-  <!-- Header fields: Passenger, Date, Seat, Flight -->
-  <text x="48" y="20" font-family="Arial, sans-serif" font-size="7" fill="white" letter-spacing="0.5" font-weight="600">NAME OF PASSENGER</text>
-  <text x="48" y="31" font-family="Arial Black, Arial, sans-serif" font-size="10" fill="white" font-weight="900">JEAK BLACK</text>
-
-  <text x="118" y="20" font-family="Arial, sans-serif" font-size="7" fill="white" letter-spacing="0.5" font-weight="600">DATE</text>
-  <text x="118" y="31" font-family="Arial Black, Arial, sans-serif" font-size="10" fill="white" font-weight="900">09 NOV 2018</text>
-
-  <text x="173" y="20" font-family="Arial, sans-serif" font-size="7" fill="white" letter-spacing="0.5" font-weight="600">SEAT</text>
-  <text x="173" y="31" font-family="Arial Black, Arial, sans-serif" font-size="10" fill="white" font-weight="900">9A</text>
-
-  <text x="193" y="20" font-family="Arial, sans-serif" font-size="7" fill="white" letter-spacing="0.5" font-weight="600">FLIGHT</text>
-  <text x="193" y="31" font-family="Arial Black, Arial, sans-serif" font-size="10" fill="white" font-weight="900">AEROFLO AIR</text>
-
-  <!-- Route: New York → London -->
-  <text x="50" y="72" font-family="Arial Black, Arial, sans-serif" font-size="18" font-weight="900" fill="#1a1a1a">New York</text>
-  <text x="155" y="72" font-family="Arial Black, Arial, sans-serif" font-size="18" font-weight="900" fill="#cc1122">London</text>
-
-  <!-- Airplane icon -->
-  <g transform="translate(130,62) scale(0.7)">
-    <path d="M0,-12 L6,2 L20,4 L20,7 L6,6 L8,14 L12,15 L12,18 L4,16 L-4,16 L-12,18 L-12,15 L-8,14 L-6,6 L-20,7 L-20,4 L-6,2 Z" fill="#1a1a1a"/>
-  </g>
-
-  <!-- BOARDING TIME -->
-  <text x="110" y="90" font-family="Arial, sans-serif" font-size="7.5" font-weight="700" fill="#cc1122" text-anchor="middle" letter-spacing="1">BOARDING TIME</text>
-  <text x="110" y="103" font-family="Arial Black, Arial, sans-serif" font-size="14" font-weight="900" fill="#1a1a1a" text-anchor="middle">21:45</text>
-
-  <!-- Gate -->
-  <text x="50" y="90" font-family="Arial, sans-serif" font-size="7" fill="#888" letter-spacing="0.5">GATE</text>
-  <text x="50" y="104" font-family="Arial Black, Arial, sans-serif" font-size="14" font-weight="900" fill="#1a1a1a">13A</text>
-
-  <!-- Stub: right side -->
-  <text x="228" y="60" font-family="Arial, sans-serif" font-size="6.5" fill="#666">JEAK BLACK</text>
-  <text x="228" y="72" font-family="Arial, sans-serif" font-size="6.5" fill="#666">09 NOV 2018</text>
-  <text x="228" y="84" font-family="Arial, sans-serif" font-size="6.5" fill="#666">SEAT 9A</text>
-  <text x="228" y="96" font-family="Arial, sans-serif" font-size="6.5" fill="#666">GATE 13A</text>
-</svg>,
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width="240" height="100">
-  <!-- Yellow background bar -->
-  <rect x="0" y="10" width="240" height="55" fill="#FFCC00"/>
-  <!-- DHL text - bold red italic -->
-  <text x="20" y="56" font-family="Arial Black, Arial, sans-serif" font-size="52" font-weight="900" font-style="italic" fill="#D40511" dominant-baseline="auto">DHL</text>
-  <!-- Speed lines left -->
-  <rect x="0" y="68" width="240" height="4" fill="#FFCC00"/>
-  <rect x="0" y="75" width="240" height="2.5" fill="#FFCC00"/>
-  <rect x="0" y="80" width="240" height="1.5" fill="#FFCC00"/>
-  <!-- EXPRESS text -->
-  <text x="120" y="95" font-family="Arial, sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#D40511" text-anchor="middle" letter-spacing="4">EXPRESS</text>
-  <!-- Decorative red speed lines on the right inside yellow bar -->
-  <rect x="185" y="22" width="55" height="4" fill="#D40511"/>
-  <rect x="192" y="30" width="48" height="3" fill="#D40511"/>
-  <rect x="198" y="37" width="42" height="2.5" fill="#D40511"/>
-</svg>,
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!-- SIM card shape -->
-  <rect x="30" y="40" width="140" height="110" rx="14" ry="14" fill="#1a3ef0"/>
-  <!-- SIM chip outline -->
-  <rect x="48" y="62" width="54" height="44" rx="6" ry="6" fill="none" stroke="white" stroke-width="3.5"/>
-  <!-- SIM chip gold contact -->
-  <rect x="55" y="70" width="34" height="28" rx="3" ry="3" fill="#e8a020"/>
-  <!-- Chip circuit lines -->
-  <line x1="63" y1="70" x2="63" y2="98" stroke="#c07010" stroke-width="1.2"/>
-  <line x1="71" y1="70" x2="71" y2="98" stroke="#c07010" stroke-width="1.2"/>
-  <line x1="79" y1="70" x2="79" y2="98" stroke="#c07010" stroke-width="1.2"/>
-  <line x1="55" y1="80" x2="89" y2="80" stroke="#c07010" stroke-width="1.2"/>
-  <line x1="55" y1="88" x2="89" y2="88" stroke="#c07010" stroke-width="1.2"/>
-  <!-- "blue" text -->
-  <text x="112" y="100" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="32" font-weight="900" fill="white" dominant-baseline="middle" text-anchor="middle">blue</text>
-</svg>,
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="320" height="100">
+            <!-- AXA square background -->
+            <rect x="10" y="15" width="72" height="72" fill="#1a1f8c"/>
+            <!-- Red diagonal slash -->
+            <line x1="48" y1="18" x2="74" y2="82" stroke="#e8001c" stroke-width="6" stroke-linecap="round"/>
+            <!-- AXA text in white -->
+            <text x="46" y="68" font-family="Arial Black, Arial, sans-serif" font-size="30" font-weight="900" fill="white" text-anchor="middle" dominant-baseline="auto" letter-spacing="1">AXA</text>
+            <!-- Investment Managers text -->
+            <text x="100" y="50" font-family="Georgia, Times New Roman, serif" font-size="22" font-weight="400" fill="#1a1f8c" dominant-baseline="middle">Investment</text>
+            <text x="100" y="76" font-family="Georgia, Times New Roman, serif" font-size="22" font-weight="400" fill="#1a1f8c" dominant-baseline="middle">Managers</text>
+          </svg>,
+          <img 
+            src="/Start.png" 
+            alt="DStv logo" 
+            style={{ width: "400px", height: "100" }} 
+          />,
 
 
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width="240" height="100">
+            <!-- Yellow background bar -->
+            <rect x="0" y="10" width="240" height="55" fill="#FFCC00"/>
+            <!-- DHL text - bold red italic -->
+            <text x="20" y="56" font-family="Arial Black, Arial, sans-serif" font-size="52" font-weight="900" font-style="italic" fill="#D40511" dominant-baseline="auto">DHL</text>
+            <!-- Speed lines left -->
+            <rect x="0" y="68" width="240" height="4" fill="#FFCC00"/>
+            <rect x="0" y="75" width="240" height="2.5" fill="#FFCC00"/>
+            <rect x="0" y="80" width="240" height="1.5" fill="#FFCC00"/>
+            <!-- EXPRESS text -->
+            <text x="120" y="95" font-family="Arial, sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#D40511" text-anchor="middle" letter-spacing="4">EXPRESS</text>
+            <!-- Decorative red speed lines on the right inside yellow bar -->
+            <rect x="185" y="22" width="55" height="4" fill="#D40511"/>
+            <rect x="192" y="30" width="48" height="3" fill="#D40511"/>
+            <rect x="198" y="37" width="42" height="2.5" fill="#D40511"/>
+          </svg>,
 
-
-
-
-
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        ,].map(p => (
+        ].map(p => (
           <div class="partner-pill">{p}</div>
         ))}
       </div>
