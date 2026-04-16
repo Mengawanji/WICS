@@ -8,66 +8,32 @@ const services = [
   {
     title: "Documentation Services",
     description: "Professional handling of all your official documents, permits, certificates and administrative paperwork.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-  <polyline points="14 2 14 8 20 8"/>
-  <line x1="16" y1="13" x2="8" y2="13"/>
-  <line x1="16" y1="17" x2="8" y2="17"/>
-  <polyline points="10 9 9 9 8 9"/>
-</svg>`,
-    color: "#1e4fa8"
+    image: "https://res.cloudinary.com/drda6i3w6/image/upload/v1776367725/Documentation_e1mnd8.png"
   },
   {
     title: "CANAL+ & DStv Subscriptions",
     description: "Fast subscription activation and renewal for CANAL+, DStv and StarTimes – all in one convenient place.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="2" y="7" width="20" height="14" rx="2"/>
-  <path d="M16 2l-4 5-4-5"/>
-  <line x1="8" y1="14" x2="16" y2="14"/>
-  <line x1="12" y1="11" x2="12" y2="17"/>
-</svg>`,
-    color: "#f97316"
+    image: "https://res.cloudinary.com/drda6i3w6/image/upload/v1776367515/DSTV_okdx1q.jpg"
   },
   {
     title: "Flight Ticket Sales",
     description: "Book domestic and international flights quickly and at competitive prices with our experienced team.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-</svg>`,
-    color: "#0ea5e9"
+    image: "https://res.cloudinary.com/drda6i3w6/image/upload/v1776367521/flight-ticket_nsrq9p.png"
   },
   {
-    title: "AXA Motor Insurance",
+    title: "Car Insurance",
     description: "Protect your vehicle with AXA insurance plans – comprehensive coverage at great rates.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <polyline points="9 12 11 14 15 10"/>
-          </svg>`,
-    color: "#10b981"
+    image: "https://res.cloudinary.com/drda6i3w6/image/upload/v1776368358/car-insurance_u1ctio.jpg"
   },
   {
     title: "DHL Express Services",
     description: "Send and receive packages worldwide with DHL's trusted express shipping. Fast, trackable, reliable.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l2-1.14"/>
-            <path d="M16.5 9.4L7.55 4.24"/>
-            <polyline points="3.29 7 12 12 20.71 7"/>
-            <line x1="12" y1="22" x2="12" y2="12"/>
-            <path d="M18 15l3 3-3 3"/>
-            <line x1="15" y1="18" x2="21" y2="18"/>
-          </svg>`,
-    color: "#f59e0b"
+    image: "https://res.cloudinary.com/drda6i3w6/image/upload/v1776367510/DHL_a2m6g5.jpg"
   },
   {
     title: "CAMTEL BLUE SIM",
     description: "Purchase and recharge your CAMTEL BLUE SIM for affordable national calls and internet data.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="5" y="2" width="14" height="20" rx="2"/>
-            <rect x="9" y="6" width="6" height="5" rx="1"/>
-            <line x1="9" y1="17" x2="15" y2="17"/>
-            <line x1="9" y1="20" x2="12" y2="20"/>
-          </svg>`,
-    color: "#8b5cf6"
+    image: "https://res.cloudinary.com/drda6i3w6/image/upload/v1776368798/Camtell_svsnoi.jpg"
   },
 ];
 
@@ -100,7 +66,7 @@ const testimonials = [
   <section class="hero">
     <div class="hero-bg">
       <img
-        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80&auto=format"
+        src="https://res.cloudinary.com/drda6i3w6/image/upload/v1776370464/bgpic_xtp6q9.jpg"
         alt="Professional business building"
         class="hero-img"
         loading="eager"
@@ -174,7 +140,7 @@ const testimonials = [
     <div class="container about-grid">
       <div class="about-image-wrap">
         <img
-          src="https://res.cloudinary.com/drda6i3w6/image/upload/v1776340334/Eugenie_nekiwg.jpg"
+          src="https://res.cloudinary.com/drda6i3w6/image/upload/v1776365170/Euge_otsyjm.jpg"
           alt="Professional team at WICS Agency"
           class="about-img"
           loading="lazy"
@@ -221,7 +187,7 @@ const testimonials = [
       </div>
       <div class="services-grid">
         {services.map(s => (
-          <ServiceCard title={s.title} description={s.description} icon={s.icon} color={s.color} />
+          <ServiceCard title={s.title} description={s.description} image={s.image} />
         ))}
       </div>
       <div class="services-cta">
@@ -263,7 +229,7 @@ const testimonials = [
   <section class="cta-section">
     <div class="cta-bg">
       <img
-        src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1400&q=80&auto=format"
+        src="https://res.cloudinary.com/drda6i3w6/image/upload/v1776367512/Canal_bboo5v.jpg"
         alt="Business office"
         class="cta-img"
         loading="lazy"
