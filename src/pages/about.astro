@@ -396,16 +396,42 @@ const milestones = [
 .about-cta p { color: rgba(255,255,255,0.72); font-size: 0.95rem; max-width: 440px; }
 .about-cta-btns { display: flex; gap: 1rem; flex-wrap: wrap; flex-shrink: 0; }
 
+/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .story-grid { grid-template-columns: 1fr; gap: 3rem; }
   .mission-grid { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .exp-badge { right: 0; }
-  .timeline-line { left: 20px; transform: none; }
-  .timeline-item, .timeline-item.left { flex-direction: column; padding-left: 50px; }
-  .timeline-card, .timeline-item.left .timeline-card { width: 100%; margin: 0; text-align: left; }
-  .timeline-dot { left: 20px; transform: translateX(-50%); }
+
+  /* Timeline: collapse to single left-aligned column */
+  .timeline {
+    max-width: 100%;
+  }
+  .timeline-line {
+    left: 14px;
+    transform: none;
+  }
+  .timeline-item,
+  .timeline-item.left {
+    flex-direction: column;
+    padding-left: 44px;
+    margin-bottom: 1.75rem;
+  }
+  /* Reset all card variants to full-width, left-aligned, no side margins */
+  .timeline-card,
+  .timeline-item.left .timeline-card,
+  .timeline-item.right .timeline-card {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  .timeline-dot {
+    left: 14px;
+    transform: translateX(-50%);
+    top: 1.2rem;
+  }
 }
+
 @media (max-width: 560px) {
   .values-grid { grid-template-columns: 1fr; }
   .about-cta-inner { flex-direction: column; }
