@@ -5,18 +5,20 @@ import Footer from '../components/Footer.astro';
 
 const serviceGroups = [
   {
+    id: "documentation",
     group: "Documentation & Administrative",
     color: "#1e4fa8",
-    bgColor: "#1e4fa815",
+    bgColor: "#e8efff",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
     services: [
       { name: "Documentation Services", desc: "We handle all types of official documents including permits, certificates, attestations, apostilles, and administrative paperwork. Save time and let our experts manage the process from start to finish." }
     ]
   },
   {
+    id: "satellite-tv",
     group: "Satellite TV Subscriptions",
-    color: "#f97316",
-    bgColor: "#f9731615",
+    color: "#ea580c",
+    bgColor: "#fff4ed",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>`,
     services: [
       { name: "CANAL+ Subscription", desc: "Subscribe or renew your CANAL+ package quickly and easily. We offer all CANAL+ plans with competitive rates. Same-day activation guaranteed." },
@@ -25,42 +27,53 @@ const serviceGroups = [
     ]
   },
   {
+    id: "travel",
     group: "Travel & Ticketing",
-    color: "#0ea5e9",
-    bgColor: "#0ea5e915",
+    color: "#0284c7",
+    bgColor: "#e0f2fe",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>`,
     services: [
       { name: "Flight Ticket Sales", desc: "Book domestic and international flight tickets through our trusted travel partners. We help you find the best routes and prices for any destination." }
     ]
   },
   {
+    id: "insurance",
     group: "Insurance",
-    color: "#10b981",
-    bgColor: "#10b98115",
+    color: "#059669",
+    bgColor: "#d1fae5",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
     services: [
       { name: "AXA Motor Insurance", desc: "Official AXA Insurance partner for motor vehicle coverage. We offer third-party liability, comprehensive plans, and all standard AXA motor insurance products at competitive rates." }
     ]
   },
   {
+    id: "courier",
     group: "Courier & Shipping",
-    color: "#f59e0b",
-    bgColor: "#f59e0b15",
+    color: "#b45309",
+    bgColor: "#fef3c7",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>`,
     services: [
       { name: "DHL Express Services", desc: "Send documents and packages locally or internationally through DHL Express. We handle packing guidance, shipment booking, tracking setup, and pickup coordination." }
     ]
   },
   {
+    id: "telecom",
     group: "Telecom Services",
-    color: "#8b5cf6",
-    bgColor: "#8b5cf615",
+    color: "#7c3aed",
+    bgColor: "#ede9fe",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>`,
     services: [
       { name: "CAMTEL BLUE SIM – Sales", desc: "Purchase your CAMTEL BLUE SIM card with all standard plans for calls, SMS and mobile internet. Quick activation with identity verification support." },
       { name: "CAMTEL BLUE SIM – Recharge", desc: "Recharge your CAMTEL BLUE SIM with any amount. Fast, reliable, and no service fees. Available for all CAMTEL data and voice bundles." }
     ]
   }
+];
+
+const stats = [
+  { value: "6+", label: "Service Categories" },
+  { value: "10+", label: "Trusted Partners" },
+  { value: "Same Day", label: "Activation" },
+  { value: "100%", label: "Reliable" },
 ];
 ---
 
@@ -79,138 +92,160 @@ const serviceGroups = [
       <div class="hero-overlay"></div>
     </div>
     <div class="container hero-content">
-      <div class="breadcrumb"><a href="/">Home</a> / <span>Services</span></div>
-      <h1>Our Services</h1>
-      <p>Comprehensive solutions for individuals and businesses — all in one place.</p>
-    </div>
-  </section>
-
-  <!-- INTRO -->
-  <section class="services-intro">
-    <div class="container">
-      <div class="intro-box">
-        <div>
-          <h2>Everything You Need, Under One Roof</h2>
-          <p>At WICS Agency, we have carefully curated a suite of high-demand services to make your life easier. Our team handles each request with speed, professionalism, and attention to detail.</p>
-        </div>
-        <div class="intro-ctas">
-          <a href="tel:+237699949035" class="btn btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
-            Call Now
-          </a>
-          <a href="https://wa.me/237699949035" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
-            WhatsApp Us
-          </a>
-        </div>
+      <div class="breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span>Services</span></div>
+      <span class="hero-badge">What We Offer</span>
+      <h1>Professional Services,<br/>Built Around You</h1>
+      <p>Comprehensive solutions for individuals and businesses — handled with speed, accuracy, and care.</p>
+      <div class="hero-actions">
+        <a href="tel:+237699949035" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          Call Now
+        </a>
+        <a href="https://wa.me/237699949035" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
       </div>
     </div>
   </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container stats-inner">
+      {stats.map(s => (
+        <div class="stat-item">
+          <strong>{s.value}</strong>
+          <span>{s.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- QUICK NAV -->
+  <nav class="quick-nav" aria-label="Service categories">
+    <div class="container">
+      <div class="qnav-inner">
+        {serviceGroups.map(g => (
+          <a href={`#${g.id}`} class="qnav-link" style={`--accent: ${g.color}`}>
+            <span class="qnav-icon" set:html={g.icon}></span>
+            <span>{g.group}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </nav>
 
   <!-- SERVICE GROUPS -->
-  {serviceGroups.map((group, gi) => (
-    <section class={`service-group ${gi % 2 === 1 ? 'bg-light' : ''}`}>
-      <div class="container">
-        <div class="group-header">
-          <div class="group-icon" style={`background: ${group.bgColor}; color: ${group.color}`} set:html={group.icon}></div>
-          <div>
-            <span class="section-label">{group.group}</span>
-          </div>
-        </div>
-        <div class={`group-cards cols-${group.services.length > 1 ? '3' : '1'}`}>
-          {group.services.map(s => (
-            <div class="detail-card" style={`border-top: 4px solid ${group.color}`}>
-              <div class="dc-icon" style={`background: ${group.bgColor}; color: ${group.color}`} set:html={group.icon}></div>
-              <h3>{s.name}</h3>
-              <p>{s.desc}</p>
-              <div class="dc-actions">
-                <a href="tel:+237699949035" class="dc-btn" style={`color: ${group.color}`}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
-                  Call to Inquire
-                </a>
-                <a href="https://wa.me/237699949035" class="dc-btn dc-btn-wa" target="_blank" rel="noopener noreferrer">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                  WhatsApp
-                </a>
+  <div class="services-wrapper">
+    {serviceGroups.map((group, gi) => (
+      <section id={group.id} class={`service-section ${gi % 2 === 1 ? 'alt-bg' : ''}`}>
+        <div class="container">
+          <div class="section-head">
+            <div class="section-head-left">
+              <div class="cat-icon" style={`background: ${group.bgColor}; color: ${group.color}`} set:html={group.icon}></div>
+              <div>
+                <p class="cat-label" style={`color: ${group.color}`}>{group.group}</p>
+                <h2 class="cat-title">{group.services.length === 1 ? group.services[0].name : `${group.services.length} Services Available`}</h2>
               </div>
             </div>
-          ))}
+            <div class="section-head-actions">
+              <a href="tel:+237699949035" class="ghost-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+                Enquire
+              </a>
+            </div>
+          </div>
+
+          <div class={`cards-grid ${group.services.length === 1 ? 'single' : group.services.length === 2 ? 'two' : 'three'}`}>
+            {group.services.map((s, si) => (
+              <article class="svc-card" style={`--card-color: ${group.color}; --card-bg: ${group.bgColor}`}>
+                <div class="card-top">
+                  <div class="card-num">{String(si + 1).padStart(2, '0')}</div>
+                  <div class="card-icon" set:html={group.icon}></div>
+                </div>
+                <h3>{s.name}</h3>
+                <p>{s.desc}</p>
+                <div class="card-footer">
+                  <a href="tel:+237699949035" class="card-cta primary-cta">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+                    Call to Enquire
+                  </a>
+                  <a href="https://wa.me/237699949035" class="card-cta wa-cta" target="_blank" rel="noopener noreferrer">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  ))}
+      </section>
+    ))}
+  </div>
 
   <!-- PARTNERS STRIP -->
   <section class="partners-section">
     <div class="container">
-      <p class="partners-label">Trusted Partners</p>
+      <div class="partners-header">
+        <p class="partners-eyebrow">Our Trusted Partners</p>
+        <p class="partners-sub">We work with industry-leading brands to deliver the best service experience.</p>
+      </div>
       <div class="partners-row">
-        {[<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
-            <!-- Black background rectangle -->
-            <rect x="0" y="0" width="300" height="100" rx="4" ry="4" fill="#1a1a1a"/>
-            <!-- CANAL+ text in white, bold -->
-            <text x="150" y="68" font-family="Arial Black, Helvetica Neue, Arial, sans-serif" font-size="58" font-weight="900" fill="white" text-anchor="middle" dominant-baseline="auto" letter-spacing="-1">CANAL+</text>
-          </svg>,
+        <div class="partner-pill">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="120" height="36">
+            <rect x="0" y="0" width="200" height="60" rx="4" fill="#1a1a1a"/>
+            <text x="100" y="42" font-family="Arial Black, sans-serif" font-size="36" font-weight="900" fill="white" text-anchor="middle">CANAL+</text>
+          </svg>
+        </div>
+        <div class="partner-pill">
+          <img src="/DStv.svg" alt="DStv" height="36" style="height:36px;width:auto;" />
+        </div>
+        <div class="partner-pill">
+          <img src="/Start.png" alt="StarTimes" height="36" style="height:36px;width:auto;" />
+        </div>
+        <div class="partner-pill">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60" width="120" height="44">
+            <rect x="4" y="4" width="52" height="52" fill="#1a1f8c"/>
+            <line x1="32" y1="6" x2="52" y2="54" stroke="#e8001c" stroke-width="5" stroke-linecap="round"/>
+            <text x="30" y="44" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="white" text-anchor="middle">AXA</text>
+            <text x="76" y="32" font-family="Georgia, serif" font-size="14" fill="#1a1f8c" dominant-baseline="middle">Insurance</text>
+          </svg>
+        </div>
+        <div class="partner-pill">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60" width="120" height="44">
+            <rect x="0" y="8" width="160" height="38" fill="#FFCC00"/>
+            <text x="14" y="38" font-family="Arial Black, sans-serif" font-size="38" font-weight="900" font-style="italic" fill="#D40511">DHL</text>
+            <text x="100" y="30" font-family="Arial, sans-serif" font-size="11" font-weight="700" font-style="italic" fill="#D40511" text-anchor="middle" letter-spacing="2">EXPRESS</text>
+          </svg>
+        </div>
+        <div class="partner-pill camtel-pill">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60" width="90" height="44">
+            <rect x="10" y="8" width="100" height="44" rx="8" fill="#1a3ef0"/>
+            <rect x="18" y="16" width="36" height="28" rx="4" fill="none" stroke="white" stroke-width="2.5"/>
+            <rect x="23" y="21" width="22" height="18" rx="2" fill="#e8a020"/>
+            <text x="74" y="36" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="20" font-weight="900" fill="white" dominant-baseline="middle" text-anchor="middle">blue</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <img 
-            src="/DStv.svg" 
-            alt="DStv logo" 
-            style={{ width: "400px", height: "100" }} 
-          />,
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-            <!-- SIM card shape -->
-            <rect x="30" y="40" width="140" height="110" rx="14" ry="14" fill="#1a3ef0"/>
-            <!-- SIM chip outline -->
-            <rect x="48" y="62" width="54" height="44" rx="6" ry="6" fill="none" stroke="white" stroke-width="3.5"/>
-            <!-- SIM chip gold contact -->
-            <rect x="55" y="70" width="34" height="28" rx="3" ry="3" fill="#e8a020"/>
-            <!-- Chip circuit lines -->
-            <line x1="63" y1="70" x2="63" y2="98" stroke="#c07010" stroke-width="1.2"/>
-            <line x1="71" y1="70" x2="71" y2="98" stroke="#c07010" stroke-width="1.2"/>
-            <line x1="79" y1="70" x2="79" y2="98" stroke="#c07010" stroke-width="1.2"/>
-            <line x1="55" y1="80" x2="89" y2="80" stroke="#c07010" stroke-width="1.2"/>
-            <line x1="55" y1="88" x2="89" y2="88" stroke="#c07010" stroke-width="1.2"/>
-            <!-- "blue" text -->
-            <text x="112" y="100" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="32" font-weight="900" fill="white" dominant-baseline="middle" text-anchor="middle">blue</text>
-          </svg>,
-
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="320" height="100">
-            <!-- AXA square background -->
-            <rect x="10" y="15" width="72" height="72" fill="#1a1f8c"/>
-            <!-- Red diagonal slash -->
-            <line x1="48" y1="18" x2="74" y2="82" stroke="#e8001c" stroke-width="6" stroke-linecap="round"/>
-            <!-- AXA text in white -->
-            <text x="46" y="68" font-family="Arial Black, Arial, sans-serif" font-size="30" font-weight="900" fill="white" text-anchor="middle" dominant-baseline="auto" letter-spacing="1">AXA</text>
-            <!-- Investment Managers text -->
-            <text x="100" y="50" font-family="Georgia, Times New Roman, serif" font-size="22" font-weight="400" fill="#1a1f8c" dominant-baseline="middle">Investment</text>
-            <text x="100" y="76" font-family="Georgia, Times New Roman, serif" font-size="22" font-weight="400" fill="#1a1f8c" dominant-baseline="middle">Managers</text>
-          </svg>,
-          <img 
-            src="/Start.png" 
-            alt="DStv logo" 
-            style={{ width: "400px", height: "100" }} 
-          />,
-
-
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width="240" height="100">
-            <!-- Yellow background bar -->
-            <rect x="0" y="10" width="240" height="55" fill="#FFCC00"/>
-            <!-- DHL text - bold red italic -->
-            <text x="20" y="56" font-family="Arial Black, Arial, sans-serif" font-size="52" font-weight="900" font-style="italic" fill="#D40511" dominant-baseline="auto">DHL</text>
-            <!-- Speed lines left -->
-            <rect x="0" y="68" width="240" height="4" fill="#FFCC00"/>
-            <rect x="0" y="75" width="240" height="2.5" fill="#FFCC00"/>
-            <rect x="0" y="80" width="240" height="1.5" fill="#FFCC00"/>
-            <!-- EXPRESS text -->
-            <text x="120" y="95" font-family="Arial, sans-serif" font-size="15" font-weight="700" font-style="italic" fill="#D40511" text-anchor="middle" letter-spacing="4">EXPRESS</text>
-            <!-- Decorative red speed lines on the right inside yellow bar -->
-            <rect x="185" y="22" width="55" height="4" fill="#D40511"/>
-            <rect x="192" y="30" width="48" height="3" fill="#D40511"/>
-            <rect x="198" y="37" width="42" height="2.5" fill="#D40511"/>
-          </svg>,
-
-        ].map(p => (
-          <div class="partner-pill">{p}</div>
-        ))}
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+        </div>
+        <div class="cta-text">
+          <h2>Ready to Get Started?</h2>
+          <p>Contact us today — we're available to assist you quickly and professionally.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="tel:+237699949035" class="btn btn-primary">Call Now</a>
+          <a href="https://wa.me/237699949035" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="/contact" class="btn btn-outline-dark">Contact Us</a>
+        </div>
       </div>
     </div>
   </section>
@@ -219,9 +254,10 @@ const serviceGroups = [
 </Layout>
 
 <style>
+/* ── HERO ── */
 .page-hero {
   position: relative;
-  min-height: 55vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -230,162 +266,417 @@ const serviceGroups = [
 .hero-img { width: 100%; height: 100%; object-fit: cover; }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(26,58,107,0.82) 100%);
+  background: linear-gradient(135deg, rgba(6,14,30,0.94) 0%, rgba(10,40,90,0.85) 100%);
 }
 .hero-content {
   position: relative;
   z-index: 2;
-  padding-top: 8rem;
+  padding-top: 9rem;
   padding-bottom: 5rem;
   color: var(--white);
 }
 .breadcrumb {
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.6);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.breadcrumb a { color: rgba(255,255,255,0.5); transition: color 0.2s; }
+.breadcrumb a:hover { color: var(--orange); }
+.breadcrumb .sep { color: rgba(255,255,255,0.3); }
+.hero-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  background: rgba(249,115,22,0.15);
+  border: 1px solid rgba(249,115,22,0.3);
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
   margin-bottom: 1.2rem;
 }
-.breadcrumb a { color: rgba(255,255,255,0.6); }
-.breadcrumb a:hover { color: var(--orange); }
 .hero-content h1 {
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-size: clamp(2rem, 5vw, 3.4rem);
   font-weight: 900;
+  line-height: 1.15;
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
-.hero-content p { font-size: 1.1rem; color: rgba(255,255,255,0.8); }
+.hero-content p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.72);
+  max-width: 480px;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+.hero-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
 
-/* INTRO BOX */
-.services-intro { padding: 3.5rem 0; }
-.intro-box {
+/* ── STATS BAR ── */
+.stats-bar {
   background: var(--blue-dark);
-  border-radius: 20px;
-  padding: 2.5rem 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.stats-inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  padding: 0;
+}
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.4rem 2.8rem;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  min-width: 140px;
+}
+.stat-item:last-child { border-right: none; }
+.stat-item strong {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--orange);
+  letter-spacing: -0.02em;
+}
+.stat-item span {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.15rem;
+}
+
+/* ── QUICK NAV ── */
+.quick-nav {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(10,22,40,0.06);
+}
+.qnav-inner {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.qnav-inner::-webkit-scrollbar { display: none; }
+.qnav-link {
   display: flex;
   align-items: center;
+  gap: 0.45rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.qnav-link:hover {
+  color: var(--accent, var(--blue-mid));
+  border-bottom-color: var(--accent, var(--blue-mid));
+  background: rgba(0,0,0,0.02);
+}
+.qnav-icon { display: flex; align-items: center; }
+.qnav-icon :global(svg) { width: 14px; height: 14px; }
+
+/* ── SERVICE SECTIONS ── */
+.services-wrapper {}
+.service-section { padding: 5rem 0; }
+.alt-bg { background: var(--gray-50); }
+
+.section-head {
+  display: flex;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gray-200);
   flex-wrap: wrap;
 }
-.intro-box h2 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 0.5rem;
-}
-.intro-box p { color: rgba(255,255,255,0.72); font-size: 0.92rem; max-width: 520px; }
-.intro-ctas { display: flex; gap: 0.8rem; flex-shrink: 0; flex-wrap: wrap; }
-
-/* SERVICE GROUPS */
-.service-group { padding: 4rem 0; }
-.bg-light { background: var(--gray-50); }
-.group-header {
+.section-head-left {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 1.25rem;
 }
-.group-icon {
-  width: 54px; height: 54px;
-  border-radius: 14px;
+.cat-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
-.group-icon :global(svg) { width: 26px; height: 26px; }
-
-.group-cards { display: grid; gap: 1.5rem; }
-.group-cards.cols-3 { grid-template-columns: repeat(3, 1fr); }
-.group-cards.cols-1 { grid-template-columns: 1fr; max-width: 720px; }
-
-.detail-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 2rem;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--gray-100);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-.detail-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-.dc-icon {
-  width: 48px; height: 48px;
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-}
-.dc-icon :global(svg) { width: 22px; height: 22px; }
-.detail-card h3 {
-  font-size: 1.05rem;
+.cat-icon :global(svg) { width: 26px; height: 26px; }
+.cat-label {
+  font-size: 0.72rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+}
+.cat-title {
+  font-size: 1.5rem;
+  font-weight: 800;
   color: var(--blue-dark);
+  letter-spacing: -0.02em;
 }
-.detail-card p {
-  font-size: 0.88rem;
-  color: var(--gray-600);
-  line-height: 1.7;
-  flex: 1;
-}
-.dc-actions {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-top: 0.5rem;
-}
-.dc-btn {
+.section-head-actions { flex-shrink: 0; }
+.ghost-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  padding: 0.5rem 1.1rem;
+  padding: 0.55rem 1.2rem;
   border-radius: 50px;
-  border: 1.5px solid currentColor;
+  border: 1.5px solid var(--gray-200);
+  color: var(--gray-600);
   transition: all 0.2s;
 }
-.dc-btn:hover { opacity: 0.8; transform: translateY(-1px); }
-.dc-btn-wa {
-  color: #25D366;
+.ghost-btn:hover {
+  border-color: var(--blue-mid);
+  color: var(--blue-mid);
+  background: rgba(30,79,168,0.04);
 }
 
-/* PARTNERS */
+/* ── CARDS ── */
+.cards-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.cards-grid.three { grid-template-columns: repeat(3, 1fr); }
+.cards-grid.two   { grid-template-columns: repeat(2, 1fr); }
+.cards-grid.single {
+  grid-template-columns: 1fr;
+  max-width: 680px;
+}
+
+.svc-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--gray-200);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.svc-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--card-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.svc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(10,22,40,0.12);
+  border-color: transparent;
+}
+.svc-card:hover::before { transform: scaleX(1); }
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-num {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--gray-400);
+  letter-spacing: 0.05em;
+  font-variant-numeric: tabular-nums;
+}
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--card-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-icon :global(svg) { width: 20px; height: 20px; }
+
+.svc-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  line-height: 1.3;
+}
+.svc-card p {
+  font-size: 0.86rem;
+  color: var(--gray-600);
+  line-height: 1.75;
+  flex: 1;
+}
+
+.card-footer {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-100);
+}
+.card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 50px;
+  transition: all 0.2s;
+}
+.primary-cta {
+  background: var(--card-bg);
+  color: var(--card-color);
+}
+.primary-cta:hover { filter: brightness(0.92); transform: translateY(-1px); }
+.wa-cta {
+  background: rgba(37,211,102,0.1);
+  color: #16a34a;
+}
+.wa-cta:hover { background: rgba(37,211,102,0.2); transform: translateY(-1px); }
+
+/* ── PARTNERS ── */
 .partners-section {
-  background: var(--gray-50);
-  padding: 3rem 0;
+  background: var(--white);
+  padding: 4rem 0;
   border-top: 1px solid var(--gray-200);
 }
-.partners-label {
+.partners-header {
   text-align: center;
-  font-size: 0.78rem;
+  margin-bottom: 2.5rem;
+}
+.partners-eyebrow {
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gray-400);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.partners-sub {
+  font-size: 0.9rem;
+  color: var(--gray-600);
 }
 .partners-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 .partner-pill {
-  padding: 0.6rem 1.5rem;
-  border-radius: 50px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--gray-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  border: 1px solid var(--gray-200);
+  background: var(--gray-50);
   transition: all 0.2s;
+  min-width: 110px;
 }
-.partner-pill:hover { border-color: var(--blue-mid); color: var(--blue-mid); }
+.partner-pill:hover {
+  border-color: var(--gray-400);
+  box-shadow: 0 4px 16px rgba(10,22,40,0.08);
+  background: var(--white);
+  transform: translateY(-2px);
+}
 
-@media (max-width: 900px) {
-  .group-cards.cols-3 { grid-template-columns: repeat(2, 1fr); }
-  .intro-box { flex-direction: column; }
+/* ── FINAL CTA ── */
+.final-cta { padding: 4rem 0; background: var(--gray-50); border-top: 1px solid var(--gray-200); }
+.cta-box {
+  background: var(--blue-dark);
+  border-radius: 20px;
+  padding: 3rem 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
-@media (max-width: 560px) {
-  .group-cards.cols-3 { grid-template-columns: 1fr; }
-  .intro-box { padding: 2rem; }
+.cta-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(249,115,22,0.15);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+  flex-shrink: 0;
+}
+.cta-text { flex: 1; min-width: 200px; }
+.cta-text h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.02em;
+}
+.cta-text p { font-size: 0.9rem; color: rgba(255,255,255,0.65); }
+.cta-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; flex-shrink: 0; }
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  transition: all 0.25s;
+}
+.btn-outline-dark:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.5);
+  transform: translateY(-2px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .cards-grid.three { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .stats-inner { gap: 0; }
+  .stat-item { padding: 1.2rem 1.5rem; min-width: 100px; }
+  .section-head { flex-direction: column; align-items: flex-start; }
+  .cta-box { flex-direction: column; padding: 2rem; text-align: center; }
+  .cta-icon { margin: 0 auto; }
+  .cta-btns { justify-content: center; }
+  .section-head-left { flex-wrap: wrap; }
+}
+@media (max-width: 640px) {
+  .cards-grid.three,
+  .cards-grid.two { grid-template-columns: 1fr; }
+  .stat-item { padding: 1rem 1.2rem; min-width: 80px; }
+  .stat-item strong { font-size: 1.2rem; }
+  .hero-content h1 { font-size: 2rem; }
+  .qnav-link { padding: 0.75rem 0.9rem; font-size: 0.72rem; }
+  .cta-box { padding: 1.75rem; }
 }
 </style>
